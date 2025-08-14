@@ -1,5 +1,6 @@
 #pragma once
 #include "CommonInclude.h"
+#include "jrdGameObject.h"
 
 namespace jrd
 { 
@@ -20,7 +21,7 @@ namespace jrd
 		HDC mHdc;
 
 		float mSpeed;
-		float mX;
-		float mY;
+		
+		GameObject mPlayer;
 	};
 }
