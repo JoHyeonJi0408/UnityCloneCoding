@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36221.1 d17.14
+VisualStudioVersion = 17.14.36221.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnityCloneCoding", "UnityCloneCoding\UnityCloneCoding.vcxproj", "{4DDF9F99-70FC-4ED2-A867-2D37930A267B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JJRRDD_Window", "JJRRDD_Window\JJRRDD_Window.vcxproj", "{6FC70199-AED1-4304-8066-4C39F2D787C5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JJRRDD_Source", "JJRRDD_Source\JJRRDD_Source.vcxitems", "{B2641F31-5477-47F2-95A1-98E2311216ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,11 +25,23 @@ Global
 		{4DDF9F99-70FC-4ED2-A867-2D37930A267B}.Release|x64.Build.0 = Release|x64
 		{4DDF9F99-70FC-4ED2-A867-2D37930A267B}.Release|x86.ActiveCfg = Release|Win32
 		{4DDF9F99-70FC-4ED2-A867-2D37930A267B}.Release|x86.Build.0 = Release|Win32
+		{6FC70199-AED1-4304-8066-4C39F2D787C5}.Debug|x64.ActiveCfg = Debug|x64
+		{6FC70199-AED1-4304-8066-4C39F2D787C5}.Debug|x64.Build.0 = Debug|x64
+		{6FC70199-AED1-4304-8066-4C39F2D787C5}.Debug|x86.ActiveCfg = Debug|Win32
+		{6FC70199-AED1-4304-8066-4C39F2D787C5}.Debug|x86.Build.0 = Debug|Win32
+		{6FC70199-AED1-4304-8066-4C39F2D787C5}.Release|x64.ActiveCfg = Release|x64
+		{6FC70199-AED1-4304-8066-4C39F2D787C5}.Release|x64.Build.0 = Release|x64
+		{6FC70199-AED1-4304-8066-4C39F2D787C5}.Release|x86.ActiveCfg = Release|Win32
+		{6FC70199-AED1-4304-8066-4C39F2D787C5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {064D3C85-3EBC-47E3-BB87-54F92B99A1BD}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		JJRRDD_Source\JJRRDD_Source.vcxitems*{6fc70199-aed1-4304-8066-4c39f2d787c5}*SharedItemsImports = 4
+		JJRRDD_Source\JJRRDD_Source.vcxitems*{b2641f31-5477-47f2-95a1-98e2311216ed}*SharedItemsImports = 9
 	EndGlobalSection
 EndGlobal

@@ -3,6 +3,11 @@
 
 #include "framework.h"
 #include "UnityCloneCoding.h"
+#include "..\\JJRRDD_Source\\jrdApplication.h"
+
+#pragma comment(lib, "..\\x64\\Debug\\JJRRDD_Window.lib")
+
+Application app;
 
 #define MAX_LOADSTRING 100
 
@@ -26,6 +31,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(lpCmdLine);
 
     // TODO: 여기에 코드를 입력합니다.
+    app.test();
 
     // 전역 문자열을 초기화합니다.
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
