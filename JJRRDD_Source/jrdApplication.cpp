@@ -1,4 +1,5 @@
 #include "jrdApplication.h"
+#include "jrdInput.h"
 
 namespace jrd
 {
@@ -21,6 +22,8 @@ namespace jrd
 		mHdc = GetDC(hwnd);
 
 		mPlayer.SetPosition(0.0f, 0.0f);
+
+		Input::Initialize();
 	}
 
 	void Application::Run() 
@@ -32,6 +35,7 @@ namespace jrd
 
 	void Application::Update() 
 	{
+		Input::Update();
 		mPlayer.Update();
 	}
 
