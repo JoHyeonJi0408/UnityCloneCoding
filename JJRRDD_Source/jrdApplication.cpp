@@ -1,5 +1,6 @@
 #include "jrdApplication.h"
 #include "jrdInput.h"
+#include "jrdTime.h"
 
 namespace jrd
 {
@@ -24,6 +25,7 @@ namespace jrd
 		mPlayer.SetPosition(0.0f, 0.0f);
 
 		Input::Initialize();
+		Time::Initialize();
 	}
 
 	void Application::Run() 
@@ -36,6 +38,7 @@ namespace jrd
 	void Application::Update() 
 	{
 		Input::Update();
+		Time::Update();
 		mPlayer.Update();
 	}
 
@@ -46,6 +49,7 @@ namespace jrd
 
 	void Application::Render()
 	{
+		Time::Render(mHdc);
 		mPlayer.Render(mHdc);
 	}
 } 

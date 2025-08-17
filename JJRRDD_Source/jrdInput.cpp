@@ -14,7 +14,17 @@ namespace jrd
 
 	void Input::Initialize()
 	{
-		for (size_t i = 0; i < (UINT)eKeyCode::End; i++) 
+		createKeys();
+	}
+
+	void Input::Update() 
+	{
+		updateKeys();
+	}
+
+	void Input::createKeys()
+	{
+		for (size_t i = 0; i < (UINT)eKeyCode::End; i++)
 		{
 			Key key = {};
 			key.bPressed = false;
@@ -25,37 +35,57 @@ namespace jrd
 		}
 	}
 
-	void Input::Update() 
+	void Input::updateKeys()
 	{
-		for (size_t i = 0; i < mKeys.size(); i++) 
-		{
-			if (GetAsyncKeyState(ASCII[i]) & 0x8000)
+		std::for_each(mKeys.begin(), mKeys.end(),
+			[](Key& key) -> void
 			{
-				if (mKeys[i].bPressed == true) 
-				{
-					mKeys[i].state = eKeyState::Pressed;
-				}
-				else
-				{
-					mKeys[i].state = eKeyState::Down;
-				}
+				updateKey(key);
+			});
+	}
 
-				mKeys[i].bPressed = true;
-			}
-			else 
-			{
-				if (mKeys[i].bPressed == true)
-				{
-					mKeys[i].state = eKeyState::Up;
-				}
-				else
-				{
-					mKeys[i].state = eKeyState::None;
-				}
-
-				mKeys[i].bPressed = false;
-			}
+	void Input::updateKey(Input::Key& key)
+	{
+		if (isKeyDown(key.keyCode)) {
+			updateKeyDown(key);
 		}
+		else
+		{
+			updateKeyUp(key);
+		}
+	}
+
+	bool Input::isKeyDown(eKeyCode code)
+	{
+		return GetAsyncKeyState(ASCII[(UINT)code]) & 0x8000;
+	}
+
+	void Input::updateKeyDown(Input::Key& key)
+	{
+		if (key.bPressed == true)
+		{
+			key.state = eKeyState::Pressed;
+		}
+		else
+		{
+			key.state = eKeyState::Down;
+		}
+
+		key.bPressed = true;
+	}
+
+	void Input::updateKeyUp(Input::Key& key)
+	{
+		if (key.bPressed == true)
+		{
+			key.state = eKeyState::Up;
+		}
+		else
+		{
+			key.state = eKeyState::None;
+		}
+
+		key.bPressed = false;
 	}
 }
 
