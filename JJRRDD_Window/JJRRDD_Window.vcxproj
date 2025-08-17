@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="jrdLoadScene.h" />
+    <ClInclude Include="jrdPlayScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="jrdPlayScene.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

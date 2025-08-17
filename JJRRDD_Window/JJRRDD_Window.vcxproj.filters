@@ -1,2 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" />
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{17f726d0-553e-446c-b686-2fdcfb0810d4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="jrdLoadScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="jrdPlayScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="jrdPlayScene.cpp" />
+  </ItemGroup>
+</Project>

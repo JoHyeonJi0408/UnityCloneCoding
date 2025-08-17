@@ -4,6 +4,8 @@
 
 namespace jrd {
 	GameObject::GameObject()
+		: mX(0),
+		mY(0)
 	{
 	}
 
@@ -43,7 +45,7 @@ namespace jrd {
 	void GameObject::Render(HDC hdc)
 	{
 		// 파란 브러쉬 생성
-		HBRUSH blueBrush = CreateSolidBrush(RGB(0, 0, 255));
+		HBRUSH blueBrush = CreateSolidBrush(RGB(rand() % 255, rand() % 255, rand() % 255));
 
 		// 파란 브러쉬 DC에 선택 그리고 흰색 브러쉬 반환값 반환
 		HBRUSH whiteBrush = (HBRUSH)SelectObject(hdc, blueBrush);
@@ -52,7 +54,7 @@ namespace jrd {
 		HPEN blackPen = (HPEN)SelectObject(hdc, redPen);
 		SelectObject(hdc, blackPen);
 
-		Rectangle(hdc, 100 + mX, 100 + mY, 200 + mX, 200 + mY);
+		Ellipse(hdc, mX, mY, 100 + mX, 100 + mY);
 
 		SelectObject(hdc, whiteBrush);
 		DeleteObject(blueBrush);

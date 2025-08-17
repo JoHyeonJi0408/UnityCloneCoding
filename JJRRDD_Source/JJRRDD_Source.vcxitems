@@ -16,14 +16,20 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)jrdApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)jrdEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)jrdGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)jrdInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)jrdScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)jrdSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)jrdTime.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)jrdApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)jrdEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)jrdGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)jrdInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)jrdScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)jrdSceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)jrdTime.cpp" />
   </ItemGroup>
 </Project>

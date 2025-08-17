@@ -4,6 +4,7 @@
 #include "framework.h"
 #include "UnityCloneCoding.h"
 #include "..\\JJRRDD_Source\\jrdApplication.h"
+#include "..\\JJRRDD_Window\\jrdLoadScene.h"
 
 #pragma comment(lib, "..\\x64\\Debug\\JJRRDD_Window.lib")
 
@@ -123,6 +124,9 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
+
+   // load scene
+   jrd::LoadScenes();
 
    return TRUE;
 }
