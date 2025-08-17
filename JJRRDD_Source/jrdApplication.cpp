@@ -40,7 +40,7 @@ namespace jrd
 		// 백버퍼를 가르킬 DC 생성
 		mBackHdc = CreateCompatibleDC(mHdc);
 
-		HBITMAP oldBitmap = (HBITMAP)SelectObject(mBackHdc, mBackBuffer);
+		HBITMAP oldBitmap = (HBITMAP)SelectObject(mBackHdc, mBackBitmap);
 		DeleteObject(oldBitmap);
 
 		mPlayer.SetPosition(0.0f, 0.0f);
